@@ -142,6 +142,12 @@ body { background: #fff !important; color: var(--mubi-text); }
 [class*="search-bar-container"] [class*="search-input"] { padding: 0 0.25rem !important; }
 [class*="horizontal-nav-bar-container"] svg { color: var(--mubi-ink) !important; fill: currentColor; }
 
+/* Narrow windows: tighten the bar so the search field never covers the links */
+@media (max-width: 1180px) {
+    [class*="vertical-nav-bar-container"] { gap: 1.25rem; left: calc(var(--mubi-gutter) + 6.5rem) !important; }
+    [class*="search-bar-container"] { flex-basis: 9rem !important; max-width: 9rem; }
+}
+
 /* ================= Shared page furniture ================= */
 /* Section labels: "FEATURED", "NEW ON MUBI" */
 [class*="board-row"] [class*="header-container"],

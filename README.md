@@ -1,6 +1,6 @@
 # StremioMUBI
 
-A theme and plugin for [Stremio Enhanced](https://github.com/REVENGE977/stremio-enhanced) that restyle every Stremio screen after [MUBI](https://mubi.com): white editorial pages, widescreen film stills, uppercase type and MUBI blue.
+A theme and two plugins for [Stremio Enhanced](https://github.com/REVENGE977/stremio-enhanced) that restyle every Stremio screen after [MUBI](https://mubi.com): white editorial pages, widescreen film stills, uppercase type and MUBI blue.
 
 Unofficial fan project, not affiliated with MUBI or Stremio.
 
@@ -8,16 +8,17 @@ Unofficial fan project, not affiliated with MUBI or Stremio.
 |---|---|
 | `mubi.theme.css` | The look: board, search, discover, library, calendar, film page, add-ons, settings, login, menus and player. Also replaces the default cat avatar. |
 | `mubi-stills.plugin.js` | Swaps portrait posters for widescreen stills, like MUBI's tiles. |
+| `mubi-hover.plugin.js` | MUBI's hover card: hover a film to get a bigger still, a blue WATCH button, the synopsis, director, country, year, runtime and genres. |
 
 ## Install
 
 The official Stremio app can't load themes, so this needs **Stremio Enhanced**, a community Stremio client that can. It uses the same account, library and add-ons.
 
 1. Download Stremio Enhanced for your system from its [releases page](https://github.com/REVENGE977/stremio-enhanced/releases) and sign in with your Stremio account.
-2. Download `mubi.theme.css` and `mubi-stills.plugin.js` from this repo.
+2. Download `mubi.theme.css`, `mubi-stills.plugin.js` and `mubi-hover.plugin.js` from this repo.
 3. In Stremio Enhanced, open **Settings**, scroll down and click **Open Themes Folder**. Put `mubi.theme.css` there.
-4. Click **Open Plugins Folder** and put `mubi-stills.plugin.js` there.
-5. Restart Stremio Enhanced. In **Settings**, apply the **MUBI** theme and enable the **MUBI Stills** plugin.
+4. Click **Open Plugins Folder** and put both `.plugin.js` files there.
+5. Restart Stremio Enhanced. In **Settings**, apply the **MUBI** theme and enable the **MUBI Stills** and **MUBI Hover** plugins.
 
 ## Changing the profile picture
 
