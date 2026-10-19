@@ -486,12 +486,10 @@ input:focus, textarea:focus { border-bottom-color: var(--mubi-ink) !important; o
     row-gap: 36px !important;
     padding: 0 0 4rem !important;
 }
-/* Library tabs (Movies / Series…) as MUBI's underlined uppercase tabs */
-[class*="library-content"] [class*="selectable-inputs"] [class*="button-container"].selected,
-[class*="library-content"] [class*="selectable-inputs"] [class*="selected"] {
-    background: none !important;
-    border-bottom: 3px solid var(--mubi-text) !important;
-}
+/* Sort chips (Last Watched, A-Z…): selected one is MUBI blue with white text */
+[class*="chip-"][class*="active"] { background: var(--mubi-blue) !important; }
+[class*="chip-"][class*="active"],
+[class*="chip-"][class*="active"] * { color: #fff !important; }
 
 /* Discover side preview: black panel like MUBI's film hero */
 [class*="discover-content"] [class*="meta-preview-container"],
