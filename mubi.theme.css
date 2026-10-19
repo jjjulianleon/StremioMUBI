@@ -777,12 +777,15 @@ input:focus, textarea:focus { border-bottom-color: var(--mubi-ink) !important; o
     background: rgba(255, 255, 255, 0.5) !important;
 }
 [class*="player-container"] [class*="slider-container"] [class*="thumb"] {
-    width: 10px !important;
-    height: 10px !important;
+    width: 12px !important;
+    height: 12px !important;
     background: #fff !important;
     border: 0 !important;
+    border-radius: 50% !important;
     box-shadow: none !important;
 }
+/* Stremio draws a blue ring over the knob; MUBI's is plain white */
+[class*="player-container"] [class*="slider-container"] [class*="thumb"]::after { display: none !important; }
 /* Player menus (subtitles, audio, speed, info): black sheets, uppercase headers */
 [class*="player-container"] [class*="menu-layer"] > *,
 [class*="player-container"] [class*="subtitles-menu-container"],
