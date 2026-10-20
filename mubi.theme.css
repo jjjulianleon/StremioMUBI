@@ -150,9 +150,6 @@ body { background: #fff !important; color: var(--mubi-text); }
 @media (max-width: 900px) {
     [class*="vertical-nav-bar-container"] { gap: 0.9rem; left: calc(var(--mubi-gutter) + 8.5rem) !important; }
     [class*="nav-tab-button-container"] [class*="label"] { font-size: 12px !important; }
-    /* search shrinks to its icon */
-    [class*="search-bar-container"] { flex-basis: 2.5rem !important; max-width: 2.5rem; border-bottom: 0 !important; }
-    [class*="search-bar-container"] [class*="search-input"] { display: none !important; }
 }
 
 /* ================= Shared page furniture ================= */

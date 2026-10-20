@@ -18,6 +18,10 @@
 }
 .mubi-back svg { width: 0.75rem; height: 1.25rem; }
 .mubi-back:disabled { color: #c8c8c8; cursor: default; }
+.mubi-search-icon { border-bottom: 0 !important; }
+.mubi-search-icon [class*="search-input"] { display: none !important; }
+/* on the search page a tight field widens over the links instead of hiding the text box */
+.mubi-search-over { position: relative; z-index: 3; background: #fff !important; }
 `;
     document.head.appendChild(style);
 
@@ -40,10 +44,33 @@
             btn.disabled = !canGoBack();
         });
     }
+    // ---- Search field sized to the room the links leave, so it never covers SETTINGS ----
+    // Measured rather than guessed, since window width, interface zoom and fonts all change it.
+    function fitSearch() {
+        // each page keeps its own top bar in the DOM, so pair links and search within the same page
+        document.querySelectorAll('[class*="main-nav-bars-container"]').forEach((page) => {
+            const links = page.querySelector(':scope > [class*="vertical-nav-bar-container"]');
+            const bar = page.querySelector(':scope > [class*="horizontal-nav-bar-container"] [class*="search-bar-container"]');
+            if (!links || !bar || !bar.getBoundingClientRect().width) return;
+            const room = bar.getBoundingClientRect().right - links.getBoundingClientRect().right - 24;
+            const fit = Math.round(Math.max(40, Math.min(224, room)));
+            const tight = fit < 110;
+            const onSearch = location.hash.startsWith("#/search");
+            // too tight for text: keep only the magnifier, except on the search page where you need to type
+            const width = tight && onSearch ? 224 : fit;
+            bar.style.setProperty("flex", `0 0 ${width}px`, "important");
+            bar.style.setProperty("max-width", `${width}px`, "important");
+            bar.classList.toggle("mubi-search-icon", tight && !onSearch);
+            bar.classList.toggle("mubi-search-over", tight && onSearch);
+        });
+    }
+
+    function update() { addArrow(); fitSearch(); }
     // ponytail: one body-wide observer; addArrow() only creates the button when it's missing
-    new MutationObserver(addArrow).observe(document.body, { childList: true, subtree: true });
-    addEventListener("hashchange", () => setTimeout(addArrow));
-    addArrow();
+    new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
+    addEventListener("hashchange", () => setTimeout(update));
+    addEventListener("resize", fitSearch);
+    update();
 
     // ---- Keyboard: Cmd+[ / Cmd+] and Cmd+← / Cmd+→ (not while typing) ----
     addEventListener("keydown", (e) => {
