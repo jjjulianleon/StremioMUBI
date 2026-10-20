@@ -1,0 +1,28 @@
+{
+ "metas": [
+  {
+   "id": "tt0112471",
+   "type": "movie",
+   "name": "Before Sunrise",
+   "poster": "https://images.metahub.space/poster/medium/tt0112471/img",
+   "background": "https://images.metahub.space/background/medium/tt0112471/img",
+   "releaseInfo": "1995"
+  },
+  {
+   "id": "tt0381681",
+   "type": "movie",
+   "name": "Before Sunset",
+   "poster": "https://images.metahub.space/poster/medium/tt0381681/img",
+   "background": "https://images.metahub.space/background/medium/tt0381681/img",
+   "releaseInfo": "2004"
+  },
+  {
+   "id": "tt2209418",
+   "type": "movie",
+   "name": "Before Midnight",
+   "poster": "https://images.metahub.space/poster/medium/tt2209418/img",
+   "background": "https://images.metahub.space/background/medium/tt2209418/img",
+   "releaseInfo": "2013"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "metas": [
+  {
+   "id": "tt0108394",
+   "type": "movie",
+   "name": "Three Colors: Blue",
+   "poster": "https://images.metahub.space/poster/medium/tt0108394/img",
+   "background": "https://images.metahub.space/background/medium/tt0108394/img",
+   "releaseInfo": "1993"
+  },
+  {
+   "id": "tt0111507",
+   "type": "movie",
+   "name": "Three Colors: White",
+   "poster": "https://images.metahub.space/poster/medium/tt0111507/img",
+   "background": "https://images.metahub.space/background/medium/tt0111507/img",
+   "releaseInfo": "1994"
+  },
+  {
+   "id": "tt0111495",
+   "type": "movie",
+   "name": "Three Colors: Red",
+   "poster": "https://images.metahub.space/poster/medium/tt0111495/img",
+   "background": "https://images.metahub.space/background/medium/tt0111495/img",
+   "releaseInfo": "1994"
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "id": "com.jjjulianleon.mubi-collections",
+ "version": "1.0.0",
+ "name": "MUBI Collections",
+ "description": "Hand-picked film collections in the style of MUBI: directors, trilogies and award winners.",
+ "resources": [
+  "catalog"
+ ],
+ "types": [
+  "movie"
+ ],
+ "idPrefixes": [
+  "tt"
+ ],
+ "catalogs": [
+  {
+   "type": "movie",
+   "id": "wong-kar-wai",
+   "name": "Wong Kar-wai: In the Mood for Hong Kong",
+   "mubi": {
+    "title": "Wong Kar-wai:",
+    "subtitle": "In the Mood for Hong Kong",
+    "description": "Neon, rain and unrequited longing. From his Hong Kong noirs to the lush melancholy of In the Mood for Love, Wong Kar-wai turned missed connections into the most romantic style in modern cinema.",
+    "colors": [
+     "#4a1520",
+     "#f2b880"
+    ]
+   }
+  },
+  {
+   "type": "movie",
+   "id": "inarritu",
+   "name": "Alejandro G. Iñárritu: Fractured Lives",
+   "mubi": {
+    "title": "Alejandro G. Iñárritu:",
+    "subtitle": "Fractured Lives",
+    "description": "Interlocking stories, bodies pushed to their limits and a camera that never stops moving. From Amores Perros to Bardo, the Mexican filmmaker keeps returning to chance, guilt and survival.",
+    "colors": [
+     "#1d3b3a",
+     "#e6cfa3"
+    ]
+   }
+  },
+  {
+   "type": "movie",
+   "id": "david-lynch",
+   "name": "David Lynch: Dreams & Nightmares",
+   "mubi": {
+    "title": "David Lynch:",
+    "subtitle": "Dreams & Nightmares",
+    "description": "Red curtains, humming lamps and small towns with something rotten underneath. Every feature from American cinema's great surrealist, from Eraserhead to Inland Empire.",
+    "colors": [
+     "#14121f",
+     "#e0473f"
+    ]
+   }
+  },
+  {
+   "type": "movie",
+   "id": "palme-dor",
+   "name": "The Palme d'Or: Recent Winners",
+   "mubi": {
+    "title": "The Palme d'Or:",
+    "subtitle": "Recent Winners",
+    "description": "Cannes' highest honour, from Jafar Panahi's 2025 winner back through a decade of Korean class satire, French body horror, Swedish farce and Turkish chamber drama.",
+    "colors": [
+     "#2b2412",
+     "#e8c66a"
+    ]
+   }
+  },
+  {
+   "type": "movie",
+   "id": "three-colours",
+   "name": "Three Colours: Blue, White, Red",
+   "mubi": {
+    "title": "Three Colours:",
+    "subtitle": "Blue, White, Red",
+    "description": "Krzysztof Kieślowski's final films take the ideals of the French flag (liberty, equality, fraternity) and turn them into three intimate stories of chance and connection.",
+    "colors": [
+     "#13284f",
+     "#e9636b"
+    ]
+   }
+  },
+  {
+   "type": "movie",
+   "id": "before-trilogy",
+   "name": "The Before Trilogy: One Conversation, Eighteen Years",
+   "mubi": {
+    "title": "The Before Trilogy:",
+    "subtitle": "One Conversation, Eighteen Years",
+    "description": "Shot nine years apart, Richard Linklater's walk-and-talk romances follow Jesse and Céline from a night in Vienna to Paris and the Greek coast, with Ethan Hawke and Julie Delpy growing older alongside them.",
+    "colors": [
+     "#3d2a1e",
+     "#f4c9a0"
+    ]
+   }
+  }
+ ]
+}

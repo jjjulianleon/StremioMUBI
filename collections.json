@@ -1,0 +1,50 @@
+[
+  {
+    "id": "wong-kar-wai",
+    "title": "Wong Kar-wai:",
+    "subtitle": "In the Mood for Hong Kong",
+    "description": "Neon, rain and unrequited longing. From his Hong Kong noirs to the lush melancholy of In the Mood for Love, Wong Kar-wai turned missed connections into the most romantic style in modern cinema.",
+    "colors": ["#4a1520", "#f2b880"],
+    "films": ["tt0096461", "tt0101258", "tt0109424", "tt0109688", "tt0112913", "tt0118845", "tt0118694", "tt0212712", "tt0765120"]
+  },
+  {
+    "id": "inarritu",
+    "title": "Alejandro G. Iñárritu:",
+    "subtitle": "Fractured Lives",
+    "description": "Interlocking stories, bodies pushed to their limits and a camera that never stops moving. From Amores Perros to Bardo, the Mexican filmmaker keeps returning to chance, guilt and survival.",
+    "colors": ["#1d3b3a", "#e6cfa3"],
+    "films": ["tt0245712", "tt0315733", "tt0449467", "tt1164999", "tt2562232", "tt1663202", "tt14176542"]
+  },
+  {
+    "id": "david-lynch",
+    "title": "David Lynch:",
+    "subtitle": "Dreams & Nightmares",
+    "description": "Red curtains, humming lamps and small towns with something rotten underneath. Every feature from American cinema's great surrealist, from Eraserhead to Inland Empire.",
+    "colors": ["#14121f", "#e0473f"],
+    "films": ["tt0074486", "tt0080678", "tt0087182", "tt0090756", "tt0100935", "tt0105665", "tt0116922", "tt0166896", "tt0166924", "tt0460829"]
+  },
+  {
+    "id": "palme-dor",
+    "title": "The Palme d'Or:",
+    "subtitle": "Recent Winners",
+    "description": "Cannes' highest honour, from Jafar Panahi's 2025 winner back through a decade of Korean class satire, French body horror, Swedish farce and Turkish chamber drama.",
+    "colors": ["#2b2412", "#e8c66a"],
+    "films": ["tt36491653", "tt28607951", "tt17009710", "tt7322224", "tt10944760", "tt6751668", "tt8075192", "tt4995790", "tt5168192", "tt4082068", "tt2758880", "tt2278871"]
+  },
+  {
+    "id": "three-colours",
+    "title": "Three Colours:",
+    "subtitle": "Blue, White, Red",
+    "description": "Krzysztof Kieślowski's final films take the ideals of the French flag (liberty, equality, fraternity) and turn them into three intimate stories of chance and connection.",
+    "colors": ["#13284f", "#e9636b"],
+    "films": ["tt0108394", "tt0111507", "tt0111495"]
+  },
+  {
+    "id": "before-trilogy",
+    "title": "The Before Trilogy:",
+    "subtitle": "One Conversation, Eighteen Years",
+    "description": "Shot nine years apart, Richard Linklater's walk-and-talk romances follow Jesse and Céline from a night in Vienna to Paris and the Greek coast, with Ethan Hawke and Julie Delpy growing older alongside them.",
+    "colors": ["#3d2a1e", "#f4c9a0"],
+    "films": ["tt0112471", "tt0381681", "tt2209418"]
+  }
+]

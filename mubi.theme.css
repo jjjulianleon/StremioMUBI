@@ -147,6 +147,13 @@ body { background: #fff !important; color: var(--mubi-text); }
     [class*="vertical-nav-bar-container"] { gap: 1.25rem; left: calc(var(--mubi-gutter) + 6.5rem) !important; }
     [class*="search-bar-container"] { flex-basis: 9rem !important; max-width: 9rem; }
 }
+@media (max-width: 900px) {
+    [class*="vertical-nav-bar-container"] { gap: 0.9rem; left: calc(var(--mubi-gutter) + 6rem) !important; }
+    [class*="nav-tab-button-container"] [class*="label"] { font-size: 12px !important; }
+    /* search shrinks to its icon */
+    [class*="search-bar-container"] { flex-basis: 2.5rem !important; max-width: 2.5rem; border-bottom: 0 !important; }
+    [class*="search-bar-container"] [class*="search-input"] { display: none !important; }
+}
 
 /* ================= Shared page furniture ================= */
 /* Section labels: "FEATURED", "NEW ON MUBI" */
@@ -272,6 +279,17 @@ body { background: #fff !important; color: var(--mubi-text); }
     text-transform: uppercase;
     color: var(--mubi-ink) !important;
 }
+
+/* Dialog buttons: main action blue with white text, Cancel/Uninstall plain */
+[class*="modal-dialog-container"] [class*="action-button"]:not([class*="cancel"]):not([class*="uninstall"]) { background: var(--mubi-blue) !important; }
+[class*="modal-dialog-container"] [class*="action-button"]:not([class*="cancel"]):not([class*="uninstall"]) * {
+    color: #fff !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+[class*="modal-dialog-container"] [class*="action-button"]:is([class*="cancel"], [class*="uninstall"]) { background: transparent !important; border: 1px solid var(--mubi-border) !important; opacity: 1 !important; }
+[class*="modal-dialog-container"] [class*="action-button"]:is([class*="cancel"], [class*="uninstall"]) * { color: var(--mubi-grey) !important; text-transform: uppercase; font-weight: 500 !important; }
 
 /* Text inputs: underlined, like MUBI's forms */
 input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], textarea,
@@ -435,11 +453,12 @@ input:focus, textarea:focus { border-bottom-color: var(--mubi-ink) !important; o
 [class*="progress-bar-layer"] [class*="progress-bar"] { background: var(--mubi-blue) !important; }
 
 /* ================= Board ("Now Showing") and Search ================= */
+/* The column is made with side padding (not a fixed width) so collection blocks can bleed to the edges */
 [class*="board-content-"]:not([class*="container"]),
 [class*="search-content"] {
-    width: min(100% - 3rem, var(--mubi-width)) !important;
-    margin: 0 auto !important;
-    padding: 2.5rem 0 4rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 2.5rem var(--mubi-gutter) 4rem !important;
 }
 [class*="board-row"], [class*="search-row"] {
     margin: 0 0 2.25rem !important;
