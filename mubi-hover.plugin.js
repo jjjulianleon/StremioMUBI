@@ -42,6 +42,7 @@
 #mubi-hover .mh-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; margin-top: 1.1rem; font-size: 15px; font-weight: 300; color: #666; }
 #mubi-hover .mh-meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
 #mubi-hover .mh-meta svg { width: 1rem; height: 1rem; fill: currentColor; }
+#mubi-hover .mh-meta svg[aria-label="Letterboxd"] { width: 1.9rem; height: 0.65rem; }
 #mubi-hover .mh-desc:empty, #mubi-hover .mh-meta:empty { display: none; }
 `;
     document.head.appendChild(style);
@@ -126,7 +127,15 @@
             if (runtime) { const s = el("span"); s.innerHTML = CLOCK; s.append(String(runtime)); meta.appendChild(s); }
             const genres = [].concat(m.genres || m.genre || []).slice(0, 3).join(", ");
             if (genres) meta.appendChild(el("span", null, genres));
-            if (m.imdbRating) meta.appendChild(el("span", null, "IMDb " + m.imdbRating));
+            // Letterboxd average when the MUBI Letterboxd Rating plugin is on, IMDb otherwise
+            const rated = el("span");
+            meta.appendChild(rated);
+            const lb = window.mubiLetterboxdRating ? window.mubiLetterboxdRating(m.imdb_id || m.id) : Promise.resolve(null);
+            lb.then((v) => {
+                if (v && v.rating != null) { rated.innerHTML = window.mubiLetterboxdLogo; rated.append(v.rating.toFixed(1)); }
+                else if (m.imdbRating) rated.textContent = "IMDb " + m.imdbRating;
+                else rated.remove();
+            });
             keepOnScreen();
         });
     }
