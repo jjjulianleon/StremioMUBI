@@ -91,7 +91,7 @@ div.mubi-row > [class*="header-container"] { display: flex !important; align-ite
         }
         const items = el("div", "mubi-items");
         metas.forEach((m) => items.appendChild(tile(m)));
-        if (metas.length > 3) {
+        if (!seeAll && metas.length > 3) {
             const arrows = el("div", "mubi-arrows");
             [["‹", -1], ["›", 1]].forEach(([label, dir]) => {
                 const b = el("button", null, label);
@@ -121,7 +121,12 @@ div.mubi-row > [class*="header-container"] { display: flex !important; align-ite
     }
 
     function boardRows(watchlist) {
-        const rows = [row("Your watchlist", watchlist.slice(0, 30))];
+        const rows = [row("Your watchlist", watchlist.slice(0, 30), `#/discover/${encodeURIComponent(STREMBOXD + "/manifest.json")}/movie/letterboxd-watchlist`)];
+        // Prefer the installed Stremboxd's own link (its config may differ from ours); its row is hidden but still there
+        rows[0].querySelector(".see-all-container").addEventListener("click", (e) => {
+            const own = document.querySelector('[class*="board-row"]:not(.mubi-row) a[class*="see-all-container"][href*="letterboxd-watchlist"]');
+            if (own) { e.preventDefault(); location.hash = own.getAttribute("href").slice(1); }
+        });
         const byGenre = new Map();
         watchlist.forEach((m) => (m.genres || []).forEach((g) => {
             if (g === "TV Movie") return;
@@ -183,6 +188,7 @@ div.mubi-row > [class*="header-container"] { display: flex !important; align-ite
         if (!m) return null;
         const params = new URLSearchParams(m[4] || "");
         if (params.get("genre")) return null; // a genre is picked: keep Stremio's grid
+        if (m[1] && decodeURIComponent(m[1]).includes("stremboxd.com")) return null; // its "genre" filter is really a sort order
         return { manifest: m[1] ? decodeURIComponent(m[1]) : CINEMETA, type: m[2] || "movie", catalog: m[3] || "top" };
     }
 

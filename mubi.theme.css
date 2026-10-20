@@ -546,6 +546,16 @@ input:focus, textarea:focus { border-bottom-color: var(--mubi-ink) !important; o
     text-transform: uppercase;
     color: #fff !important;
 }
+/* The Discover side panel is narrow: smaller title that wraps instead of being cut off */
+[class*="discover-content"] [class*="meta-preview-container"] [class*="name-container"],
+[class*="discover-content"] [class*="meta-preview-container"] [class*="logo-placeholder"] {
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
 [class*="meta-preview-container"] [class*="runtime-label"],
 [class*="meta-preview-container"] [class*="release-info-label"] {
     font: 300 14px/20px var(--mubi-font) !important;
