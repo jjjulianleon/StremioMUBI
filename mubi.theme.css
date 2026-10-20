@@ -94,7 +94,7 @@ body { background: #fff !important; color: var(--mubi-text); }
 [class*="vertical-nav-bar-container"] {
     position: fixed !important;
     top: 0 !important;
-    left: calc(var(--mubi-gutter) + 8rem) !important;
+    left: calc(var(--mubi-gutter) + 10.5rem) !important;
     z-index: 2;
     width: auto !important;
     height: var(--horizontal-nav-bar-size) !important;
@@ -144,11 +144,11 @@ body { background: #fff !important; color: var(--mubi-text); }
 
 /* Narrow windows: tighten the bar so the search field never covers the links */
 @media (max-width: 1180px) {
-    [class*="vertical-nav-bar-container"] { gap: 1.25rem; left: calc(var(--mubi-gutter) + 6.5rem) !important; }
+    [class*="vertical-nav-bar-container"] { gap: 1.25rem; left: calc(var(--mubi-gutter) + 9rem) !important; }
     [class*="search-bar-container"] { flex-basis: 9rem !important; max-width: 9rem; }
 }
 @media (max-width: 900px) {
-    [class*="vertical-nav-bar-container"] { gap: 0.9rem; left: calc(var(--mubi-gutter) + 6rem) !important; }
+    [class*="vertical-nav-bar-container"] { gap: 0.9rem; left: calc(var(--mubi-gutter) + 8.5rem) !important; }
     [class*="nav-tab-button-container"] [class*="label"] { font-size: 12px !important; }
     /* search shrinks to its icon */
     [class*="search-bar-container"] { flex-basis: 2.5rem !important; max-width: 2.5rem; border-bottom: 0 !important; }

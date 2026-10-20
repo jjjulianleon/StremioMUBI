@@ -1,6 +1,6 @@
 # StremioMUBI
 
-A theme, five plugins and a collections addon for [Stremio Enhanced](https://github.com/REVENGE977/stremio-enhanced) that restyle every Stremio screen after [MUBI](https://mubi.com): white editorial pages, widescreen film stills, uppercase type and MUBI blue.
+A theme, six plugins and a collections addon for [Stremio Enhanced](https://github.com/REVENGE977/stremio-enhanced) that restyle every Stremio screen after [MUBI](https://mubi.com): white editorial pages, widescreen film stills, uppercase type and MUBI blue.
 
 Unofficial fan project, not affiliated with MUBI or Stremio.
 
@@ -12,6 +12,7 @@ Unofficial fan project, not affiliated with MUBI or Stremio.
 | `mubi-collections.plugin.js` | Draws collections from the MUBI Collections addon as MUBI's collection blocks: duotone still, big title, synopsis, films below. |
 | `mubi-rows.plugin.js` | Board becomes Continue Watching + your Letterboxd watchlist grouped by genre (set `LETTERBOXD_USER` at the top). Discover shows one row per genre with the MUBI collection banners in between; picking a genre brings back the normal grid. |
 | `mubi-letterboxd-rating.plugin.js` | Replaces the IMDb rating button with the film's Letterboxd average, linking to its Letterboxd page. The hover card uses it too. |
+| `mubi-navigation.plugin.js` | A back arrow in the top bar and browser-style back/forward: Cmd+[ / Cmd+], Cmd+← / Cmd+→, mouse side buttons and a two-finger swipe. |
 | `collections.json` | The hand-picked collections (Wong Kar-wai, Iñárritu, David Lynch, Palme d'Or, Three Colours, the Before trilogy). |
 
 ## Install
@@ -19,10 +20,10 @@ Unofficial fan project, not affiliated with MUBI or Stremio.
 The official Stremio app can't load themes, so this needs **Stremio Enhanced**, a community Stremio client that can. It uses the same account, library and add-ons.
 
 1. Download Stremio Enhanced for your system from its [releases page](https://github.com/REVENGE977/stremio-enhanced/releases) and sign in with your Stremio account.
-2. Download `mubi.theme.css` and the five `.plugin.js` files from this repo.
+2. Download `mubi.theme.css` and the six `.plugin.js` files from this repo.
 3. In Stremio Enhanced, open **Settings**, scroll down and click **Open Themes Folder**. Put `mubi.theme.css` there.
-4. Click **Open Plugins Folder** and put the five `.plugin.js` files there.
-5. Restart Stremio Enhanced. In **Settings**, apply the **MUBI** theme and enable all five **MUBI** plugins.
+4. Click **Open Plugins Folder** and put the six `.plugin.js` files there.
+5. Restart Stremio Enhanced. In **Settings**, apply the **MUBI** theme and enable all six **MUBI** plugins.
 6. Go to **Addons**, paste `https://jjjulianleon.github.io/StremioMUBI/manifest.json` into **Add addon** and install it. The collections show up at the bottom of the Board; drag the addon higher in the add-ons list to move them up.
 
 ## Adding a collection
