@@ -25,13 +25,20 @@ body.mubi-board-on [class*="board-content-"]:not([class*="container"]) > [class*
 body.mubi-discover-on [class*="catalog-container"] > :not([class*="selectable-inputs-container"]):not(.mubi-rows) { display: none !important; }
 body.mubi-discover-on [class*="discover-content"] > [class*="meta-preview-container"] { display: none !important; }
 body.mubi-discover-on [class*="catalog-container"] { padding-right: var(--mubi-gutter, 1.5rem) !important; }
+/* Stremio scrolls Discover inside the grid we hide, so the rows need their own scroll area.
+   It spans the full width (gutter as padding) so collection banners can still bleed to the edges. */
+[class*="catalog-container"] > .mubi-rows {
+    flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden;
+    margin: 0 calc(-1 * var(--mubi-gutter, 1.5rem)) !important;
+    padding: 0 var(--mubi-gutter, 1.5rem) 4rem !important;
+}
 div.mubi-row div.mubi-items {
     display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 8px) / 3); gap: 4px;
     overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
 }
 div.mubi-row div.mubi-items::-webkit-scrollbar { display: none; }
 div.mubi-row div.mubi-items > div { display: block !important; scroll-snap-align: start; }
-div.mubi-row > [class*="header-container"] { display: flex !important; align-items: center; }
+div.mubi-row:not([data-mubi-collection]) > [class*="header-container"] { display: flex !important; align-items: center; }
 .mubi-row .mubi-arrows { margin-left: auto; display: flex; gap: 0.25rem; }
 .mubi-row .mubi-arrows button {
     width: 2rem; height: 2rem; border: 1px solid #c8c8c8; background: #fff; color: #323232;
